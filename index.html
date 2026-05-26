@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddy Kiranmayi | Portfolio</title>
+    <meta name="description" content="Professional Portfolio of Reddy Kiranmayi - AI Enthusiast & UI/UX Designer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Plexus Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="logo-text">Kiranmayi</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary contact-btn">Contact me</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="avatar-container" id="avatar-root">
+                    <!-- Avatar injected here -->
+                </div>
+                <h1 class="hero-title">I'm <span class="highlight" id="hero-name">Reddy Kiranmayi</span></h1>
+                <h2 class="hero-subtitle">I'm a <span id="typed"></span></h2>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-secondary" id="resume-link" target="_blank">My resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">A</span><span id="about-title">bout Me</span></h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="" alt="Profile" class="profile-img" id="profile-img">
+                    </div>
+                    <div class="about-text">
+                        <ul class="about-list" id="about-points">
+                            <!-- Points injected here -->
+                        </ul>
+                        
+                        <div class="skills-container">
+                            <h3 class="subsection-title">Skills</h3>
+                            <div class="skills-grid" id="skills-grid">
+                                <!-- Skills injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section-padding">
+            <div class="container">
+                <div class="stats-grid" id="stats-grid">
+                    <!-- Stats injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Timeline Section -->
+        <section id="education" class="education section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">T</span>ime Line</h2>
+                <div class="timeline" id="timeline-grid">
+                    <!-- Timeline injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">P</span>rojects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects injected here -->
+                </div>
+            </div>
+        </section>
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">C</span>ertifications</h2>
+                <div class="certifications-grid" id="certs-grid">
+                    <!-- Certifications injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">C</span>ontact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-info-col">
+                        <h3>Let's Talk</h3>
+                        <p class="contact-subtitle">Feel free to reach out to me at any time, I'm currently available and open to connect!</p>
+                        <div class="contact-info" id="contact-info">
+                            <!-- Contact info injected here -->
+                        </div>
+                    </div>
+                    <div class="contact-form-col">
+                        <form id="portfolio-contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!'); this.reset();">
+                            <div class="form-group">
+                                <div class="input-like-wrapper">
+                                    <div class="input-field-wrap">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" required placeholder="Enter Your Name">
+                                    </div>
+                                    <button type="button" class="like-btn" id="like-name" aria-label="Like Name field" onclick="toggleLike(this)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-like-wrapper">
+                                    <div class="input-field-wrap">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" required placeholder="Enter Your Email">
+                                    </div>
+                                    <button type="button" class="like-btn" id="like-email" aria-label="Like Email field" onclick="toggleLike(this)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-like-wrapper">
+                                    <div class="input-field-wrap">
+                                        <label for="message">Write Your Message Here</label>
+                                        <textarea id="message" required rows="5" placeholder="Enter Your Message"></textarea>
+                                    </div>
+                                    <button type="button" class="like-btn" id="like-message" aria-label="Like Message field" onclick="toggleLike(this)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="footer-content" id="footer-content">
+                <!-- Footer injected here -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- tsparticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <!-- typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Data and Custom Script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
