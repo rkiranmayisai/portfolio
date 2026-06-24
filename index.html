@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddy Kiranmayi | Portfolio</title>
+    <meta name="description" content="Professional Portfolio of Reddy Kiranmayi - AI Enthusiast & UI/UX Designer">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Devicons (Tech Brand Logos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Plexus Background -->
+    <div id="tsparticles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" id="logo-text">Kiranmayi</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#bootcamp">Bootcamp</a></li>
+                <li><a href="#websites">Website</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary contact-btn">Contact me</a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="avatar-container" id="avatar-root">
+                    <!-- Avatar injected here -->
+                </div>
+                <h1 class="hero-title">I'm <span class="highlight" id="hero-name">Reddy Kiranmayi</span></h1>
+                <h2 class="hero-subtitle">I'm a <span id="typed"></span></h2>
+                <div class="hero-cta">
+                    <a href="#" class="btn btn-secondary" id="resume-link" target="_blank">My resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">A</span><span id="about-title">bout Me</span></h2>
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="" alt="Profile" class="profile-img" id="profile-img">
+                    </div>
+                    <div class="about-text">
+                        <ul class="about-list" id="about-points">
+                            <!-- Points injected here -->
+                        </ul>
+                        
+                        <div class="skills-container">
+                            <h3 class="subsection-title">Skills</h3>
+                            <div class="skills-grid" id="skills-grid">
+                                <!-- Skills injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section-padding">
+            <div class="container">
+                <div class="stats-grid" id="stats-grid">
+                    <!-- Stats injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Timeline Section -->
+        <section id="education" class="education section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">T</span>ime Line</h2>
+                <div class="timeline" id="timeline-grid">
+                    <!-- Timeline injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">P</span>rojects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects injected here -->
+                </div>
+            </div>
+        </section>
+        <!-- Bootcamp Section -->
+        <section id="bootcamp" class="bootcamp section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">B</span>ootcamp</h2>
+                <div class="bootcamp-grid" id="bootcamp-grid">
+                    <!-- Bootcamp items injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Website Section -->
+        <section id="websites" class="websites section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">W</span>ebsites</h2>
+                <div class="websites-grid" id="websites-grid">
+                    <!-- Website items injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">C</span>ertifications</h2>
+                <div class="certifications-grid" id="certs-grid">
+                    <!-- Certifications injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <h2 class="section-title"><span class="title-logo">C</span>ontact Me</h2>
+                <div class="contact-grid">
+                    <div class="contact-info-col">
+                        <h3>Let's Talk</h3>
+                        <p class="contact-subtitle">Feel free to reach out to me at any time, I'm currently available and open to connect!</p>
+                        <div class="contact-info" id="contact-info">
+                            <!-- Contact info injected here -->
+                        </div>
+                    </div>
+                    <div class="contact-form-col">
+                        <form id="portfolio-contact-form" class="contact-form">
+                            <div class="form-group">
+                                <div class="input-like-wrapper">
+                                    <div class="input-field-wrap">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+                                    </div>
+                                    <button type="button" class="like-btn" id="like-name" aria-label="Like Name field" onclick="toggleLike(this)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-like-wrapper">
+                                    <div class="input-field-wrap">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" id="email" name="email" required placeholder="Enter Your Email">
+                                    </div>
+                                    <button type="button" class="like-btn" id="like-email" aria-label="Like Email field" onclick="toggleLike(this)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-like-wrapper">
+                                    <div class="input-field-wrap">
+                                        <label for="message">Write Your Message Here</label>
+                                        <textarea id="message" name="message" required rows="5" placeholder="Enter Your Message"></textarea>
+                                    </div>
+                                    <button type="button" class="like-btn" id="like-message" aria-label="Like Message field" onclick="toggleLike(this)">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span class="like-count">0</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Submit Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="footer-content" id="footer-content">
+                <!-- Footer injected here -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panda AI Chatbot Widget -->
+    <div class="panda-chat-widget">
+        <!-- Chat Button -->
+        <button class="panda-chat-btn" id="panda-chat-btn" aria-label="Open Chatbot">
+            <i class="fas fa-paw"></i>
+            <span class="panda-notification-badge">1</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div class="panda-chat-window" id="panda-chat-window">
+            <div class="panda-chat-header">
+                <div class="panda-chat-header-info">
+                    <div class="panda-avatar-status">
+                        <span class="panda-status-dot"></span>
+                        <i class="fas fa-paw panda-header-avatar"></i>
+                    </div>
+                    <div>
+                        <h4>Panda</h4>
+                        <span class="panda-status-text">AI Assistant</span>
+                    </div>
+                </div>
+                <div class="panda-chat-header-actions">
+                    <button id="panda-voice-btn" title="Toggle Voice"><i class="fas fa-volume-up"></i></button>
+                    <button id="panda-settings-btn" title="AI Settings"><i class="fas fa-cog"></i></button>
+                    <button id="panda-close-btn" title="Close Chat"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+
+            <!-- Settings Panel (Hidden by default) -->
+            <div class="panda-settings-panel" id="panda-settings-panel">
+                <h5>Panda AI Settings</h5>
+                <p>Enter a Gemini API Key to enable general AI reasoning (ChatGPT/Gemini capabilities):</p>
+                <div class="panda-input-group">
+                    <input type="password" id="panda-api-key" placeholder="AI Studio API Key">
+                    <button id="panda-save-key-btn">Save</button>
+                </div>
+                <a href="https://aistudio.google.com/" target="_blank" class="panda-api-link">Get a free Gemini API Key <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <div class="panda-chat-messages" id="panda-chat-messages">
+                <!-- Messages will be injected here -->
+            </div>
+
+            <form class="panda-chat-input-area" id="panda-chat-form">
+                <input type="text" id="panda-chat-input" placeholder="Ask me about Kiranmayi..." required autocomplete="off">
+                <button type="button" id="panda-mic-btn" title="Speak to Panda"><i class="fas fa-microphone"></i></button>
+                <button type="submit" id="panda-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- tsparticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <!-- typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Data and Custom Script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
