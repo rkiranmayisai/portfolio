@@ -33,16 +33,34 @@ const renderPortfolio = () => {
         </div>
     `).join('');
 
-    // 4. Stats
+    // 4. Stats — Premium Platform Cards
+    const platformMeta = {
+        'LeetCode':       { icon: 'fas fa-code',        grad: 'linear-gradient(135deg,#f89f1b,#f7941d)', shadow: 'rgba(248,159,27,0.35)',  badge: '⚡ Active Coder',    badgeColor: '#f89f1b' },
+        'Codechef':       { icon: 'fas fa-utensils',    grad: 'linear-gradient(135deg,#6c5ce7,#a29bfe)', shadow: 'rgba(108,92,231,0.35)', badge: '⭐ 2-Star Coder',   badgeColor: '#a29bfe' },
+        'Geeks For Geeks':{ icon: 'fas fa-leaf',        grad: 'linear-gradient(135deg,#00b894,#00cec9)', shadow: 'rgba(0,184,148,0.35)',  badge: '🏆 College Rank 2', badgeColor: '#00b894' }
+    };
     const statsGrid = document.getElementById('stats-grid');
-    statsGrid.innerHTML = data.codingStats.map(stat => `
-        <div class="stat-card">
-            <h3>${stat.platform}</h3>
-            ${stat.rating ? `<p class="stat-value">Rating : ${stat.rating}</p>` : ''}
+    statsGrid.innerHTML = data.codingStats.map((stat, i) => {
+        const meta = platformMeta[stat.platform] || { icon:'fas fa-star', grad:'linear-gradient(135deg,#e84393,#ff6b9d)', shadow:'rgba(232,67,147,0.35)', badge:'Coder', badgeColor:'#e84393' };
+        return `
+        <div class="stat-card stat-card-premium" style="--card-shadow:${meta.shadow}; animation-delay:${i * 0.12}s">
+            <div class="stat-card-glow" style="background:${meta.grad};"></div>
+            <div class="stat-card-icon-ring" style="background:${meta.grad}; box-shadow: 0 0 24px ${meta.shadow};">
+                <i class="${meta.icon}"></i>
+            </div>
+            <div class="stat-badge" style="color:${meta.badgeColor}; border-color:${meta.badgeColor}30; background:${meta.badgeColor}15;">${meta.badge}</div>
+            <h3 class="stat-platform-name">${stat.platform}</h3>
+            ${stat.rating ? `
+            <div class="stat-rating-wrap">
+                <span class="stat-rating-label">Rating</span>
+                <span class="stat-rating-value" style="background:${meta.grad}; -webkit-background-clip:text; -webkit-text-fill-color:transparent;">${stat.rating}</span>
+            </div>` : ''}
             <p class="stat-desc">${stat.details}</p>
-            <a href="${stat.link}" class="btn btn-outline" target="_blank">View Profile</a>
-        </div>
-    `).join('');
+            <a href="${stat.link}" class="stat-view-btn" target="_blank" style="background:${meta.grad}; box-shadow: 0 4px 18px ${meta.shadow};">
+                <i class="fas fa-arrow-up-right-from-square"></i> View Profile
+            </a>
+        </div>`;
+    }).join('');
 
     // 5. Projects
     const projectsGrid = document.getElementById('projects-grid');
@@ -148,10 +166,25 @@ const renderPortfolio = () => {
                     <h3>${edu.degree}</h3>
                     <span class="timeline-badge">${edu.period}</span>
                     <p class="timeline-institution">${edu.institution}</p>
-                    <p class="timeline-score">${edu.score}</p>
+                    <p class="timeline-score">🏅 ${edu.score}</p>
                 </div>
             </div>
         `).join('');
+
+        // Scroll-reveal animation for timeline items
+        const tlObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('tl-visible');
+                    tlObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        timelineGrid.querySelectorAll('.timeline-item').forEach((item, i) => {
+            item.style.transitionDelay = `${i * 0.18}s`;
+            tlObserver.observe(item);
+        });
     }
 
     // 7. Contact
